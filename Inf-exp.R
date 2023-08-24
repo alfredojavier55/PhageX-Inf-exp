@@ -91,10 +91,13 @@ fit <- abc(model = model,
            npart = 200,
            distance = distance)
 
-## This is the estimate of the appropriate beta given the system and the target prevalance
+## This is the estimate of the appropriate beta given the system and the target prevalance (Kind of shit :) )
+pdf("fit.pdf")
 plot(fit)
-
+dev.off()
 
 ## This is a sample from the posterior beta
 
+pdf("posterior.pdf")
 plot(run(fit))
+dev.off()
